@@ -11,8 +11,8 @@ const config = {
   prefix: '',
   theme: {
     fontFamily: {
-      display: ['"Inria Serif"', 'serif'],
-      body: ['Inter', 'sans-serif'],
+      display: ['Lato', 'sans-serif'],
+      body: ['Lato', 'sans-serif'],
       playfair: ['"Playfair Display"', 'serif']
     },
     container: {

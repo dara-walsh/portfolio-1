@@ -8,11 +8,17 @@ export default async function Page() {
   const posts = await getBlogPosts();
 
   return (
-    <Layout title={'Blog'}>
+    <Layout title={'F&F (Family & Friends)'}>
       <div className="container mx-auto px-4 py-16">
         <SectionHero
-          title="Thoughts & Ideas"
-          subtitle="My collected thoughts on design, development, and everything in between."
+          title="Private"
+          subtitle={
+            <>
+              Just a collection of Family Videos and Pictures I can share with my mother
+              <br />
+              <span style={{ opacity: 0.8 }}>(not professional but effective)</span>
+            </>
+          }
         />
         <Suspense
           fallback={<div className="py-12 text-center">Loading posts...</div>}

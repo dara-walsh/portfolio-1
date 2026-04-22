@@ -90,7 +90,7 @@ export default function AnimatedSection({
         stagger: stagger > 0 ? { each: stagger } : undefined,
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%',
+          start: 'top 70%',
           end: 'top 20%',
           toggleActions: 'play none none reverse'
         }

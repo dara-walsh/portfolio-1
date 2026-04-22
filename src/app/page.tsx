@@ -9,40 +9,16 @@ import Hero from '@/components/home/hero';
 import Description from '@/components/home/Description/description';
 
 const slider1 = [
-  {
-    color: 'white',
-    src: 'stylesync/pca.png'
-  },
-  {
-    color: 'white',
-    src: 'stylesync/diagram.png'
-  },
-  {
-    color: '#21242b',
-    src: 'catapult-trading/dashboard.png'
-  },
-  {
-    color: '#21242b',
-    src: 'm31/controller.jpg'
-  }
+  { color: 'white', src: 'ticker/20170302_153224.jpg' },
+  { color: 'white', src: 'ticker/20220708_103859.jpg' },
+  { color: 'white', src: 'ticker/Coin Twitter-2.png' },
+  { color: 'white', src: 'ticker/Cradle V2.png' }
 ];
 const slider2 = [
-  {
-    color: '#d4e3ec',
-    src: 'm31/specs.png'
-  },
-  {
-    color: '#9289BD',
-    src: 'axo/prototype.png'
-  },
-  {
-    color: 'white',
-    src: 'm31/app.png'
-  },
-  {
-    color: 'white',
-    src: 'stylesync/hero.svg'
-  }
+  { color: 'white', src: 'ticker/Screenshot 2021-11-28 at 18.53.56.png' },
+  { color: 'white', src: 'ticker/Screenshot 2024-10-30 203733.png' },
+  { color: 'white', src: 'ticker/Test 1.png' },
+  { color: 'white', src: 'ticker/v6 Grays Landscape 1a.png' }
 ];
 
 export default function Home() {

@@ -6,28 +6,28 @@ import NavLinks from '@/components/nav/NavLinks';
 
 const links = [
   {
-    title: 'home',
+    title: 'Home',
     href: '/'
   },
   {
-    title: 'about',
+    title: 'About',
     href: '/about'
   },
   {
-    title: 'projects',
+    title: 'Projects',
     href: '/projects'
   },
   {
-    title: 'web gallery',
+    title: 'Web Gallery',
     href: '/web'
   },
   {
-    title: 'blog',
-    href: '/blog'
+    title: 'Contact',
+    href: '/contact'
   },
   {
-    title: 'contact',
-    href: '/contact'
+    title: 'F&F',
+    href: '/blog'
   }
 ];
 

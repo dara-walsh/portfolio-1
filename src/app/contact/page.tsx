@@ -18,15 +18,40 @@ export default function Contact() {
     gsap.to(background.current, { opacity: isActive ? 0.7 : 0 });
   };
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText('bettinasosarohl@gmail.com');
-    setEmailCopied(true);
-    setTimeout(() => setEmailCopied(false), 2000);
+  const fallbackCopy = (text: string) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.setAttribute('readonly', '');
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  };
+
+  const copyEmail = async () => {
+    const email = 'dara.walsh@ul.ie';
+
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        fallbackCopy(email);
+      }
+
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch {
+      fallbackCopy(email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    }
   };
 
   const scrollToEmail = () => {
     const emailSection = document.getElementById('email');
-    copyEmail();
+    void copyEmail();
     if (emailSection) {
       emailSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -35,28 +60,19 @@ export default function Contact() {
   return (
     <div className="-mt-20 bg-foreground text-white ">
       <div className="flex min-h-screen w-full items-center justify-center pt-44 align-middle text-[8.6vw] xs:text-[5.6vw]">
-        <div className="p-12 xs:w-1/2 xs:p-0">
-          <div className="flex justify-between uppercase">
-            <p className="m-0">Bettina</p>
-            <p className="m-0">Sosa</p>
+        <div className="p-12 text-center xs:w-1/2 xs:p-0">
+          <div className="uppercase">
+            <p className="m-0">Dara Walsh</p>
+            <p className="m-0">Biomedical Communicator</p>
           </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">software</p>
-            <p className="m-0">&</p>
-          </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">design</p>
-            <p className="m-0">engineer</p>
-          </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">Ldn </p>
-            <Link href={'https://www.linkedin.com/in/bettina-sosa/'}>
+          <div className="flex justify-center uppercase">
+            <Link href={'https://www.linkedin.com/in/dara-walsh-6570b8137/'}>
               <TextDisperse setBackground={setBackground}>
                 <p>→Linkedin</p>
               </TextDisperse>
             </Link>
           </div>
-          <div className="flex justify-between uppercase">
+          <div className="flex flex-col items-center gap-1 uppercase">
             <TextDisperse
               setBackground={setBackground}
               onClick={() => {
@@ -70,9 +86,9 @@ export default function Contact() {
               <p className="m-0">→Email</p>
             </TextDisperse>
 
-            <Link href={'https://github.com/bettinasosa'}>
+            <Link href={'https://www.ul.ie/ehs/medicine/mr-dara-walsh'}>
               <TextDisperse setBackground={setBackground}>
-                <p>→Github</p>
+                <p>→University</p>
               </TextDisperse>
             </Link>
           </div>

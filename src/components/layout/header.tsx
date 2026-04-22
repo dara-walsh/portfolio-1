@@ -49,72 +49,47 @@ export default function Header() {
     <>
       <div
         ref={header}
-        className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-light text-white mix-blend-difference lg:p-8"
+        className="absolute top-0 z-20 box-border flex w-full items-center p-4 font-light text-white lg:p-8"
       >
         <div className="flex lg:pr-56">
           <Link href={'/'} className="group z-10 flex items-center space-x-2">
             <Magnetic>
-              <Image
-                height={32}
-                width={32}
-                src="/images/logo.jpg"
-                alt="Bettinas logo"
-                priority
-              />
+              <span style={{ color: '#1c75bc' }}>
+                <Image
+                  height={64}
+                  width={64}
+                  src="/images/DW_Logo1small.svg"
+                  alt="DW Logo"
+                  priority
+                />
+              </span>
             </Magnetic>
             {!isMobile() && (
-              <>
-                <div className="hover:rotate-[360deg]">©</div>
-                <div className="relative flex overflow-hidden">
-                  <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
-                    coded by
-                  </div>
-                  <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
-                    Bettina
-                  </div>
-
-                  <div
-                    className="ease-custom-cubic
-              translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                  >
-                    Sosa
-                  </div>
-                </div>
-              </>
+              <div className="font-semibold text-lg pl-2 text-accent mix-blend-difference">Dara Walsh</div>
             )}
           </Link>
         </div>
         {!isMobile() && (
-          <div className="flex flex-1 items-center justify-between font-semibold">
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/about'}>About</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/projects'}>Projects</Link>
-                </Magnetic>
+          <nav className="flex flex-1 items-center justify-end font-semibold space-x-8">
+            <Magnetic>
+              <Link href={'/about'} className="text-primary">About</Link>
+            </Magnetic>
+            <Magnetic>
+              <Link href={'/projects'} className="text-primary">Projects</Link>
+            </Magnetic>
+            <Magnetic>
+              <Link href={'/web'} className="text-primary">Web Gallery</Link>
+            </Magnetic>
+            <Magnetic>
+              <Link href={'/blog'} className="text-primary">F&F</Link>
+            </Magnetic>
+            <Magnetic>
+              <div className="flex items-center">
+                <Link href={'/contact'} className="text-primary">Contact</Link>
+                <ArrowUpRight size={18} />
               </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/web'}>Web Gallery</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/blog'}>Blog</Link>
-                </Magnetic>
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <Magnetic>
-                <div className="flex">
-                  <Link href={'/contact'}>Contact</Link>
-                  <ArrowUpRight size={18} />
-                </div>
-              </Magnetic>
-            </div>
-          </div>
+            </Magnetic>
+          </nav>
         )}
       </div>
       {!isMobile() && (

@@ -1,0 +1,12 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio
+    ports:
+      - "3007:3007"
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped

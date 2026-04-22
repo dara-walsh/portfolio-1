@@ -14,13 +14,13 @@ export default function MenuButton({ isActive, toggleMenu }: ButtonProps) {
         transition={{ duration: 0.5, type: 'tween', ease: [0.76, 0, 0.24, 1] }}
       >
         <div
-          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-secondary text-background"
+          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-[#1c75bc] text-white"
           onClick={toggleMenu}
         >
           <PerspectiveText label="Menu" />
         </div>
         <div
-          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-[#FFF7E5] text-secondary"
+          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-[#1c75bc] text-white"
           onClick={toggleMenu}
         >
           <PerspectiveText label="Close" />
@@ -33,10 +33,10 @@ export default function MenuButton({ isActive, toggleMenu }: ButtonProps) {
 function PerspectiveText({ label }: { label: string }) {
   return (
     <div className="transform-style-3d hover:transform-rotateX-90 hover:p:nth-of-type(1):transform-translateY-full hover:p:nth-of-type(1):opacity-0 hover:p:nth-of-type(2):opacity-100 duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] flex h-full w-full flex-col items-center justify-center transition">
-      <p className="duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] pointer-events-none m-0 uppercase transition">
+      <p className="font-body duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] pointer-events-none m-0 uppercase transition">
         {label}
       </p>
-      <p className="transform-origin-bottom-center transform-rotateX--90 duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] pointer-events-none absolute m-0 translate-y-[9px] uppercase opacity-0 transition">
+      <p className="font-body transform-origin-bottom-center transform-rotateX--90 duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] pointer-events-none absolute m-0 translate-y-[9px] uppercase opacity-0 transition">
         {label}
       </p>
     </div>

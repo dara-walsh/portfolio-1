@@ -9,95 +9,41 @@ import { ModalContext } from './modalContext';
 
 const projects = [
   {
-    title: 'M31 Controller',
-    src: 'm31/controller.jpg',
-    description:
-      'A video/audio game controller to make digital entertainment more approachable to those with visual impairments.',
-    href: '/projects/m31',
-    tag: 'Prototyping',
-    color: '#000000'
+    title: 'AI Medical Imaging – MONAI / MONAILabel',
+    tag: 'AI / Medical Imaging',
+    href: '/projects/ai-medical-imaging',
+    src: 'ai-medical-imaging/Domains - Frame 4.jpg',
+    color: '#e8f0f7'
   },
   {
-    title: 'AXO',
-    src: 'axo/astronaut-square.png',
-    href: '/projects/axo',
-    tag: 'Bio Materials',
-    color: '#ee5622'
+    title: 'Surgical Simulation Systems',
+    tag: 'Simulation',
+    href: '/projects/surgical-simulation',
+    src: 'projects/surgical-simulation/P2_A.png', // updated preview image
+    color: '#f7f3e8'
   },
   {
-    title: 'StyleSync',
-    src: 'stylesync/stylesync.png',
-    href: '/projects/stylesync',
-    tag: 'ML / AI',
-    color: 'pink'
+    title: 'Robotic Surgery Research & Applications',
+    tag: 'Robotics',
+    href: '/projects/robotic-surgery',
+    src: 'projects/robotic-surgery/IMG_8838.JPG',
+    color: '#e8f7f0'
   },
   {
-    title: 'StackeRs',
-    description:
-      'Reusable packaging made of highly recyclable materials for baby bathing products.',
-    src: 'bottles/block.png',
-    href: '/projects/stackers',
-    tag: 'Packaging',
-    color: '#EFE8D3'
+    title: 'Mesentery: Advanced Anatomical Research',
+    tag: 'Anatomy',
+    href: '/projects/mesentery-research',
+    src: 'projects/mesentery-research/Mesentery B&L 2023.png',
+    color: '#f0e8f7'
   },
   {
-    title: 'ASTRA',
-    description: 'An interstellar games arcade with a hologram screen.',
-    src: 'astra/astra.png',
-    href: '/projects/astra',
-    tag: 'GIZMO',
-    color: '#303030'
-  }
-
-  // {
-  //   title: 'DAO social network',
-  //   src: 'sojo/astra.png',
-  //   href: '/projects/catapult-v1',
-  //   tag: 'Software',
-  //   color: '#303030'
-  // },
-  // {
-  //   title: 'SOJO',
-  //   src: 'sojo/astra.png',
-  //   href: '/projects/sojo',
-  //   tag: 'Software',
-  //   color: '#303030'
-  // },
-  // {
-  //   title: 'JENGA',
-  //   src: 'jenga.jpg',
-  //   href: '/projects/robot-jenga',
-  //   tag: 'Robotics',
-  //   color: '#706D63'
-  // },
-  // {
-  //   title: 'Woody',
-  //   src: 'woody.jpg',
-  //   href: '/projects/woody',
-  //   tag: 'Electronics',
-  //   color: '#706D63'
-  // },
-  // {
-  //   title: 'DAFT(PUNK)BOT',
-  //   src: 'cubo/cubo.jpg',
-  //   href: '/projects/cubo',
-  //   tag: 'Electronics',
-  //   color: '#EFE8D3'
-  // },
-  // {
-  //   title: 'Tandem bike',
-  //   src: 'bike.png',
-  //   href: '/projects/tandem-bike-bike',
-  //   tag: 'CAD & optimisation',
-  //   color: '#EFE8D3'
-  // },
-  // {
-  //   title: 'TETRIS',
-  //   src: 'tetris.png',
-  //   href: '/projects/tetris',
-  //   tag: 'Software',
-  //   color: '#EFE8D3'
-  // }
+    title: 'SOH Event: Design, Management & Coordination',
+    tag: 'Event Management',
+    href: '/projects/soh-event',
+    src: 'projects/soh-event/Event Graphics 2025-10.png',
+    color: '#f7e8e8'
+  },
+  // ...existing code...
 ];
 
 export default function ProjectsHome() {
@@ -114,12 +60,16 @@ export default function ProjectsHome() {
                     index={index}
                     title={project.title}
                     tag={project.tag}
+                    src={project.src}
                   />
                 </Link>
               );
             })}
           </div>
-          <Modal projects={projects} />
+            <Modal projects={projects} />
+            <div className="mt-12 text-center text-xl font-semibold text-gray-600">
+              More Projects Coming Soon
+            </div>
         </div>
       </Layout>
     </ModalContext.Provider>

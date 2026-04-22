@@ -60,13 +60,6 @@ export default function RoundedButton({
         <div className="relative z-10 transition-colors duration-300 ease-linear hover:text-white">
           {children}
         </div>
-        <div
-          ref={circle}
-          className={clsx(
-            'absolute top-[100%] h-[20%] w-full rounded-full sm:h-[150%]',
-            `bg-${backgroundColor}`
-          )}
-        ></div>
       </Button>
     </Magnetic>
   );

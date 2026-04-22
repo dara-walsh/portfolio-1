@@ -43,13 +43,13 @@ export default function ContactInfo() {
               <Image
                 fill
                 alt={'profile'}
-                src={`/images/profile2.jpg`}
+                src={`/images/Head%20Shot_toon.png`}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">
-              Let&apos;s work together!
+              Check out some of my projects
             </h2>
           </span>
           <motion.div
@@ -64,61 +64,24 @@ export default function ContactInfo() {
             </RoundedButton>
           </motion.div>
         </div>
-        <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <RoundedButton>bettinasosarohl@gmail.com</RoundedButton>
-        </div>
+        {/* Removed email button as requested */}
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
           <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            AI/LLM enthusiast | Cutting-edge tech advocate | Web3 builder |
-            Passionate about using technology to make the world a better place.
+            Biomedical Communicator | Translating clinical and biomedical research across surgical and medical disciplines
           </p>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
-                Version
-              </h3>
-              <p className="relative m-0 cursor-pointer p-1">2024 © Edition</p>
-            </span>
-            <span className="flex flex-col gap-3">
-              <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
-                Timezone
+                Location
               </h3>
               <p className="relative m-0 cursor-pointer p-1">
-                {timeNow} UK (GMT+1)
+                University Hospital Limerick, Limerick
+              </p>
+              <p className="relative m-0 cursor-pointer p-1">
+                University of Limerick
               </p>
             </span>
-          </div>
-          <div className="flex items-end gap-2">
-            <span className="flex flex-col gap-3">
-              <h3 className="m-0 cursor-default text-base font-light text-gray-500">
-                Socials
-              </h3>
-              <Magnetic>
-                <Link
-                  href="https://twitter.com/bettysrohl"
-                  className={animatedUnderlineStyle}
-                >
-                  Twitter
-                </Link>
-              </Magnetic>
-            </span>
-            <Magnetic>
-              <Link
-                href="https://github.com/bettinasosa"
-                className={animatedUnderlineStyle}
-              >
-                Github
-              </Link>
-            </Magnetic>
-            <Magnetic>
-              <Link
-                href="https://www.linkedin.com/in/bettina-sosa/"
-                className={animatedUnderlineStyle}
-              >
-                Linkedin
-              </Link>
-            </Magnetic>
           </div>
         </div>
       </div>

@@ -84,37 +84,38 @@ export default function Modal({ projects }: ModalProps) {
     }
   }, []);
 
+  // Defensive: fallback if missing href, src, or color
+  const project = projects[index] || {};
+  const href = project.href || '#';
+  const color = project.color || '#fff';
+  const src = project.src || '';
+
   return (
-    <Link href={projects[index].href}>
+    <Link href={href}>
       <motion.div
         variants={scaleAnimation}
         ref={modalContainer}
         initial="initial"
         animate={active ? 'enter' : 'closed'}
         className="pointer-events-none absolute z-50 flex h-[350px] w-[400px] items-center justify-center overflow-hidden bg-background"
+        style={{ overflow: 'hidden', borderRadius: 16, top: 0, left: 0, transform: 'none' }}
       >
         <div
-          style={{ top: index * -100 + '%' }}
-          className="transition-top ease-custom-cubic absolute h-full w-full duration-500"
+          className="flex h-full w-full items-center justify-center"
+          style={{ backgroundColor: color, height: '100%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          key={`modal_${index}`}
         >
-          {projects.map((project, index) => {
-            const { src, color, href } = project;
-            return (
-              <div
-                className="flex h-full w-full items-center justify-center"
-                style={{ backgroundColor: color }}
-                key={`modal_${index}`}
-              >
-                <Image
-                  src={`/images/${src}`}
-                  width={350}
-                  height={0}
-                  alt="image"
-                  className="h-auto"
-                />
-              </div>
-            );
-          })}
+          {src ? (
+            <Image
+              src={`/images/${src}`}
+              width={350}
+              height={220}
+              alt="image"
+              style={{ objectFit: 'contain', borderRadius: 8, boxShadow: '0 4px 24px rgba(0,0,0,0.12)', maxWidth: '100%', maxHeight: '100%' }}
+            />
+          ) : (
+            <span className="text-gray-400">No preview</span>
+          )}
         </div>
       </motion.div>
     </Link>

@@ -15,11 +15,11 @@ export default function Layout({
   center
 }: PropsWithChildren<Props>) {
   return (
-    <div className="mt-36 px-8 py-16 sm:py-20">
+    <div className="mt-8 px-8 py-8 sm:py-10">
       <div className={clsx('pb-14', center ? 'text-center' : '')}>
         <h1
           className={clsx(
-            'text-3xl font-medium lg:text-[10rem]',
+            'text-3xl font-medium lg:text-[10rem] leading-tight sm:leading-tight md:leading-tight',
             center ? 'items-center' : ''
           )}
         >

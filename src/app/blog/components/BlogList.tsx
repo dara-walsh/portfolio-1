@@ -27,35 +27,30 @@ export function BlogList({ posts }: BlogListProps) {
   };
 
   return (
-    <div className="space-y-12">
+    <div>
       <motion.div
         className="flex items-baseline justify-between"
         variants={headerVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-6xl font-bold tracking-tight">New Posts</h1>
+        <h1 className="text-6xl font-bold tracking-tight">Family Reunions</h1>
         <a href="#" className="text-base underline underline-offset-4">
           view more
         </a>
       </motion.div>
-
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post, index) => (
-          <ProjectCard
-            key={post.id}
-            id={post.url}
-            title={post.title}
-            description={post.content}
-            imagePath={post.heroImage || ''}
-            link={post.url}
-            publishedAt={new Date(post.publishedAt)}
-            index={index}
-            animated
-            buttonText="Read Article"
-          />
-        ))}
+      <div style={{width:'100%',height:'120vw',maxHeight:'1200px',position:'relative',marginBottom:'1rem'}}>
+        <iframe
+          src="https://vimeo.com/showcase/8929343/embed2"
+          allow="autoplay; fullscreen; picture-in-picture; gyroscope; accelerometer; clipboard-write; encrypted-media; web-share"
+          frameBorder="0"
+          style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}}
+          allowFullScreen
+          title="Family Reunions Vimeo Showcase"
+        ></iframe>
       </div>
+
+      {/* Cards removed as requested */}
     </div>
   );
 }

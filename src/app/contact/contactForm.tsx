@@ -28,7 +28,7 @@ export function ContactForm() {
 
   const onSubmit = (data: ContactFormData) => {
     const { subject, email, body } = data;
-    window.location.href = `mailto:bettinasosarohl@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:dara.walsh@ul.ie?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}%0D%0A%0D%0AFrom: ${encodeURIComponent(
       email
@@ -43,8 +43,9 @@ export function ContactForm() {
             Let&apos;s talk!
           </h2>
           <p className="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-            I&apos;m always looking for new and innovative ways to use my
-            skills.
+            I apply digital skills in design, web development, AI, and
+            analysis in support of research and education, and welcome dialogue
+            and collaboration in these areas.
           </p>
         </div>
         <div className="col-span-2">

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
     domains: [
@@ -10,7 +11,8 @@ const nextConfig = {
       'cdn-images-1.medium.com'
     ],
     unoptimized: false
-  }
+  },
+  // devIndicators: true // Removed invalid config
 };
 
 export default nextConfig;

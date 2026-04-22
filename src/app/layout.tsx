@@ -21,16 +21,24 @@ const ogImagePath = '/images/Bettina_s%20portfolio.jpeg';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Bettina's portfolio",
-    template: "%s | Bettina's portfolio"
+    default: "Dara Walsh Portfolio",
+    template: "%s | Dara Walsh Portfolio"
   },
   description: metaDescription,
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/apple-touch-icon.png'
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: "Bettina's portfolio",
-    title: "Bettina's portfolio",
+    siteName: "Dara Walsh Portfolio",
+    title: "Dara Walsh Portfolio",
     description: metaDescription,
     images: [
       {

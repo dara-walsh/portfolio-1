@@ -1,3 +1,4 @@
+@import './lato-font.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,16 +14,16 @@
     --popover: 0 0% 100%; /* ffffff white */
     --popover-foreground: 20 14.3% 4.1%; /* 0c0a09 smoky black */
 
-    --primary: 210 100% 56%; /* 1f8fff Dodger blue */
+    --primary: 201 72% 43%; /* #1c75bc */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 282, 100%, 81%; /*  e2a0ff / 332 93% 67%; f95ca4 brilliant rose / 332 92% 80% fb9dc9 carnation pink*/
+    --secondary: 201 72% 43%; /* #1c75bc */
     --secondary-foreground: 24 9.8% 10%; /* 1c197 eerie black */
 
     --muted: 293 33% 91%; /* eddfef pale purple */
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 60 4.8% 95.9%;
+    --accent: 194 100% 47%; /* #00aeef */
     --accent-foreground: 24 9.8% 10%;
 
     --destructive: 2 100% 50%; /* ff0800 candy apple red */
@@ -43,16 +44,16 @@
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 210 100% 56%;
+    --primary: 201 72% 43%; /* #1c75bc */
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 282, 100%, 81%;
+    --secondary: 201 72% 43%;
     --secondary-foreground: 24 9.8% 10%;
 
     --muted: 293 33% 91%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 60 4.8% 95.9%;
+    --accent: 194 100% 47%; /* #00aeef */
     --accent-foreground: 24 9.8% 10%;
 
     --destructive: 2 100% 50%; /* ff0800 candy apple red */

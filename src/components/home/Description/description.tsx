@@ -23,20 +23,7 @@ export default function Description() {
     >
       <div className="space-y-4">
         <p className="m-0 gap-2 leading-snug sm:text-4xl">
-          {phrase1.split(' ').map((word, index) => (
-            <span
-              key={index}
-              className="relative mr-1.5 inline-flex overflow-hidden"
-            >
-              <motion.span
-                variants={slideUp}
-                custom={index}
-                animate={isInView ? 'open' : 'closed'}
-              >
-                {word}
-              </motion.span>
-            </span>
-          ))}
+          I’m Dara Walsh, a biomedical communicator specialising in the accurate translation of complex scientific and medical information. I combine evidence‑based research with strategic communication and visual design to support education, public engagement, and knowledge dissemination across healthcare and biomedical contexts.
         </p>
         <p className="m-0 gap-2 leading-snug sm:text-4xl">
           {phrase2.split(' ').map((word, index) => (
@@ -59,24 +46,14 @@ export default function Description() {
         <motion.p
           variants={opacity}
           animate={isInView ? 'open' : 'closed'}
-          className="m-0 pb-3 font-light sm:text-lg"
-        >
-          Currently the founding full stack software engineer @Catapult a DeFi
-          startup.
-        </motion.p>
-        <motion.p
-          variants={opacity}
-          animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          My projects have received multiple awards in the past, and I am always
-          looking for new and innovative ways to use my skills to make a
-          positive impact on the world.
+          I bring interdisciplinary expertise across surgical and medical specialties, collaborating on perioperative projects with multidisciplinary clinical teams.
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>
-            <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
-              About me
+            <RoundedButton className="mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-secondary text-white hover:bg-accent sm:mt-16 sm:h-[200px] sm:w-[200px]">
+              <span className="text-xl sm:text-3xl">About me</span>
             </RoundedButton>
           </Link>
         </div>

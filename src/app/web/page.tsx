@@ -8,58 +8,58 @@ import { SectionHero } from '@/components/ui/SectionHero';
 // Work items data
 const workItems = [
   {
-    id: 'onethoughtaday',
-    title: 'One Thought A Day',
+    id: 'metabdomen',
+    title: 'Anatomical 3D viewer',
     description:
-      'A minimalist journaling application with elegant typography - personal project',
-    imagePath: '/images/onethoughtaday/homepage.png',
-    link: 'https://www.onethoughtaday.com',
-    tags: ['UI/UX Design', 'Minimalism']
+      'Reconstructions from Dicoms and photogrammetry, And a collection of educational models',
+    imagePath: '/images/gallery/Metabdomen.png',
+    link: 'https://www.metabdomen.com/',
+    tags: ['UI/UX Design', 'Java Scripts', 'Server Deployed']
   },
   {
-    id: 'walletcon',
-    title: 'WalletCon',
+    id: 'soh-event',
+    title: "Sylvestor O'Halloran Event",
     description:
-      'Annual conference for the WalletConnect ecosystem in Cannes, France - fully built and maintained by me',
-    imagePath: '/images/gallery/walletcon.png',
-    link: 'https://www.walletcon.com',
-    tags: ['Web3', 'Event']
+      'Annual Perioperative Symposium held in Limerick each year',
+    imagePath: '/images/gallery/SOH206.png',
+    link: 'https://soh.isrs.ie/',
+    tags: ['WordPress', 'Event', 'Frontend/Backend']
   },
   {
-    id: 'walletconnect',
-    title: 'WalletConnect Network',
+    id: 'mesenteric-research',
+    title: 'Mesenteric Research',
     description:
-      'The connectivity layer for the financial internet, powering 700+ wallets and 70K+ apps - full-stack engineer',
-    imagePath: '/images/gallery/walletconnect.png',
-    link: 'https://walletconnect.com',
-    tags: ['Web3', 'Infrastructure']
+      'A collection of video/images related to published papers',
+    imagePath: '/images/gallery/MES_RESEARCH.png',
+    link: 'https://mesentery.ie/',
+    tags: ['WordPress', 'Research']
   },
   {
-    id: 'reown',
-    title: 'Reown',
+    id: 'robotic-surgery',
+    title: 'Robotic Surgery',
     description:
-      'Infrastructure for onchain finance — from DeFi and payments to enterprises - full-stack engineer',
-    imagePath: '/images/gallery/reown.png',
-    link: 'https://reown.com',
-    tags: ['Web3', 'DeFi']
+      'Irish Society of Robotic Surgery, A collection of information and news regarding robotic surgery in Ireland',
+    imagePath: '/images/gallery/ISRS.png',
+    link: 'https://isrs.ie/',
+    tags: ['WordPress', 'Blog']
   },
   {
-    id: 'hivemind',
-    title: 'Hivemind',
-    description: 'AI-powered crypto marketing strategist (beta) - CTO',
-    imagePath: '/images/gallery/hivemind.png',
-    link: 'https://hivemind.myosin.xyz',
-    tags: ['AI', 'Marketing']
+    id: 'mpgs-book',
+    title: 'BOOK - Mesenteric Principles of Gastrointestional Surgery',
+    description: 'Companion website for Mesenteric Textbook',
+    imagePath: '/images/gallery/MPGS.png',
+    link: 'https://mpgs.ie/',
+    tags: ['WordPress', 'Companion']
   }
 ];
 
 export default function Work() {
   return (
-    <Layout title="Web Gallery">
+    <Layout title="Gallery">
       <div className="container mx-auto min-h-screen px-4 py-16">
         <SectionHero
-          title="Design & Development"
-          subtitle="A collection of my design work and web projects featuring various styles and approaches."
+          title="Research Website design and development"
+          subtitle="I design, develop, and manage research-focused websites from concept to deployment."
         />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
